@@ -6,6 +6,7 @@ const userController = require('../controllers/userController');
 
 router.post('/signup',userController.signUp);
 router.post('/login',userController.login); 
+router.get('/AllUserWithoutToken',userController.getAllUser)
 router.get(
     "/welcome",
     passport.authenticate("jwt", { session: false }),
