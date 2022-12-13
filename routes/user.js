@@ -14,6 +14,5 @@ router.get(
   );
 router.get('/AllUser',passport.authenticate("jwt",{session:false}),userController.getAllUser); 
 
-router.patch('/updateUser/:id',passport.authenticate('jwt',{session:false},userController.updateUser))
 
 module.exports  = router;

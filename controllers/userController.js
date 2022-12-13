@@ -43,7 +43,7 @@ module.exports.signUp = async (req, res) => {
         password: encryptedPassword,
       });
       // Create token
-      const token = jwt.sign(user.toJSON(), "SafaidAnsari", {
+      const token = jwt.sign(user.toJSON(), process.env.SecretKey, {
         expiresIn: "2h",
       });
       user.token = token;
@@ -73,7 +73,7 @@ module.exports.login =  async (req,res)=>{
     
     // create token 
 
-    const token = jwt.sign(user.toJSON(),'SafaidAnsari',{
+    const token = jwt.sign(user.toJSON(), process.env.SecretKey,{
         expiresIn:'2h'
     })
      

@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
-const cors = require('cors');
-const bodyParser = require("body-parser");
+const cors = require('cors'); 
+require('dotenv').config();
+const bodyParser = require("body-parser"); 
 const port = process.env.PORT || 8000; 
 const db = require('./config/mongoose');
 // const routes = require('./routes/index'); 

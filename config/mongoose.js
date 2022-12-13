@@ -1,7 +1,7 @@
 const mongoose  = require('mongoose');
 
 
-const url = 'mongodb+srv://safaidansari:9528901800@safaidansari.6h03zyd.mongodb.net/UserAuthentication'
+const url = process.env.DB_URL;
 mongoose.set('strictQuery',true);
 mongoose.connect(url,{
     useNewUrlParser:true,
